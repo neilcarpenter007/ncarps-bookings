@@ -7,7 +7,6 @@ use Ncarps\Bookings\Models\Attendee;
 class BookingAttendee extends Pivot
 {
     public $table = 'booking_attendee';
-
     public $belongsTo = [
         'attendee' => [
             Attendee::class,
@@ -15,9 +14,19 @@ class BookingAttendee extends Pivot
             'key'   => 'attendee_id'
         ],
         'booking' => [
-            Attendee::class,
+            Booking::class,
             'table' => 'ncarps_bookings_bookings',
             'key'   => 'booking_id'
         ]
     ];
+
+    public function afterSave()
+    {
+        /**
+         *
+         * For some reason - this isn't working - afterSave() is never being called
+         *
+         */
+        dd($this->booking);
+    }
 }
