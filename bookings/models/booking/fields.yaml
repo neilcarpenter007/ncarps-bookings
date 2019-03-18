@@ -1,0 +1,19 @@
+# ===================================
+#  Form Field Definitions
+# ===================================
+
+fields:
+
+  title:
+    label: Booking Title
+
+  price_per_attendee:
+    label: Price per attendee
+    default: 10.00
+    disabled: true
+    type: number
+
+  total:
+    label: Booking Total
+    type: partial
+    path: $\ncarps\bookings\models\booking\_total_field.htm

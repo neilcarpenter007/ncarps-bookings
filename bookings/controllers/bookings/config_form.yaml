@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Booking
+
+# Model Form Field configuration
+form: $/ncarps/bookings/models/booking/fields.yaml
+
+# Model Class name
+modelClass: Ncarps\Bookings\Models\Booking
+
+# Default redirect location
+defaultRedirect: ncarps/bookings/bookings
+
+# Create page
+create:
+    title: Create Booking
+    redirect: ncarps/bookings/bookings/update/:id
+    redirectClose: ncarps/bookings/bookings
+
+# Update page
+update:
+    title: Edit Booking
+    redirect: ncarps/bookings/bookings
+    redirectClose: ncarps/bookings/bookings
+
+# Preview page
+preview:
+    title: Preview Booking

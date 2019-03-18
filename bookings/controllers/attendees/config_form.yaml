@@ -1,0 +1,31 @@
+# ===================================
+#  Form Behavior Config
+# ===================================
+
+# Record name
+name: Attendee
+
+# Model Form Field configuration
+form: $/ncarps/bookings/models/attendee/fields.yaml
+
+# Model Class name
+modelClass: Ncarps\Bookings\Models\Attendee
+
+# Default redirect location
+defaultRedirect: ncarps/bookings/attendees
+
+# Create page
+create:
+    title: Create Attendee
+    redirect: ncarps/bookings/attendees/update/:id
+    redirectClose: ncarps/bookings/attendees
+
+# Update page
+update:
+    title: Edit Attendee
+    redirect: ncarps/bookings/attendees
+    redirectClose: ncarps/bookings/attendees
+
+# Preview page
+preview:
+    title: Preview Attendee

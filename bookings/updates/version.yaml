@@ -1,0 +1,6 @@
+1.0.1: First version of Bookings
+1.0.2:
+  - Add migrations for bookings and attendees
+  - create_bookings_table.php
+  - create_attendees_table.php
+  - create_booking_attendee_pivot_table.php
