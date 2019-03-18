@@ -16,10 +16,10 @@ fields:
   total:
     label: Booking Total
     type: partial
+    commentAbove: I want to update this price whenever an attendee is added to the booking
     path: $\ncarps\bookings\models\booking\_total_field.htm
 
   attendees@update:
     label: Attendees
     type: partial
-    commentAbove: I want to update this price whenever an attendee is added to the booking
     path: ~/plugins/ncarps/bookings/models/booking/_attendees_field.htm
