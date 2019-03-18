@@ -10,7 +10,6 @@ fields:
   price_per_attendee:
     label: Price per attendee
     default: 10
-    disabled: true
     type: number
 
   total:
