@@ -22,11 +22,11 @@ class BookingAttendee extends Pivot
 
     public function afterSave()
     {
-        /**
-         *
-         * For some reason - this isn't working - afterSave() is never being called
-         *
-         */
-        dd($this->booking);
+        trace_log('in pivot afterSave');
+    }
+
+    public function afterDelete()
+    {
+        trace_log('in pivot afterSave');
     }
 }
