@@ -21,4 +21,10 @@ class Booking extends Model
             'pivotModel' => BookingAttendee::class,
         ]
     ];
+
+    public function updateTotal()
+    {
+        $this->total = $this->attendees()->count() * $this->price_per_attendee;
+        $this->save();
+    }
 }
