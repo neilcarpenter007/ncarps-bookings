@@ -10,9 +10,3 @@ attendees:
 
   manage:
     form: $/ncarps/bookings/models/attendee/fields.yaml
-
-  pivot:
-    form:
-      fields:
-        name:
-          label: Name
