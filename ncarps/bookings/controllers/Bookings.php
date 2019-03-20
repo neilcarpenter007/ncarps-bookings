@@ -1,5 +1,6 @@
 <?php namespace Ncarps\Bookings\Controllers;
 
+use Event;
 use BackendMenu;
 use Backend\Classes\Controller;
 
@@ -23,5 +24,9 @@ class Bookings extends Controller
         parent::__construct();
 
         BackendMenu::setContext('Ncarps.Bookings', 'bookings', 'bookings');
+
+        Event::listen('backend.form.beforeRefresh', function ($widget, $form) {
+           $form->data['total'] = $this->vars['formModel']->fresh()->total;
+        });
     }
 }
