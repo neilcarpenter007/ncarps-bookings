@@ -26,7 +26,7 @@ class Bookings extends Controller
         BackendMenu::setContext('Ncarps.Bookings', 'bookings', 'bookings');
 
         Event::listen('backend.form.beforeRefresh', function ($widget, $form) {
-           $form->data['total'] = $this->vars['formModel']->fresh()->total;
+           $form->data['total'] = $widget->model->fresh()->total;
         });
     }
 }
